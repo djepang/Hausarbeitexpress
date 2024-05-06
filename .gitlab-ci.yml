@@ -1,0 +1,23 @@
+image: node:latest
+
+stages:
+  - install
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+install:
+  stage: install
+  script:
+    - npm install
+
+test:
+   stage: test
+   script:
+   -chmod +x test.sh
+     - node.app.js &
+    -sleep 10 &&
+     -./test.sh
+

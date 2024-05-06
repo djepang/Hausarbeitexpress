@@ -1,0 +1,281 @@
+npm init -y
+
+
+adjep@DJARTH MINGW64 ~/Workspace/Express (main)
+$ cd aufgabeexpr/
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001
+Hello World!
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d "test" localhost:3001
+Got a POST request
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d "data to PUT" -X PUT localhost:3001/user
+Got a PUT request at /user
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001/user -X DELETE
+Got a DELETE request at /user
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ node app.js 
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at Function.listen (C:\Users\adjep\Workspace\Express\aufgabeexpr\node_modules\expre
+ss\lib\application.js:635:24)
+    at Object.<anonymous> (C:\Users\adjep\Workspace\Express\aufgabeexpr\app.js:25:5)   
+    at Module._compile (node:internal/modules/cjs/loader:1369:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)
+    at Module.load (node:internal/modules/cjs/loader:1206:32)
+    at Module._load (node:internal/modules/cjs/loader:1022:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:
+12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1924:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {   
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3001
+}
+
+Node.js v20.12.1
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d id=1 description=putze http:// localhost:3001/add
+curl: (3) URL rejected: Bad hostname
+curl: (3) URL rejected: No host part in the URL
+{}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d  http:// localhost:3001/add
+{}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d id=1  http:// localhost:3001/add
+curl: (3) URL rejected: No host part in the URL
+{}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d id=1 http://localhost:3001/add
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d id=1 http://localhost:3001/add
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d id=1 http://localhost:3001/add
+ curl -d '{id=1, description="putzen"}' http://localhost:3001/add
+
+ 
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ node app.js
+Example app listening on port 3001
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ node app.js
+Example app listening on port 3001
+undefined
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ NODE_ENV=development node app.js
+Example app listening on port 3001
+undefined
+
+curl --header "Content-Type: application/json" --request POST -d '{"id" : 1, "description" : "putzen"}' http://localhost:3000/add
+
+adjep@DJARTH MINGW64 ~/Workspace/Express (main)
+$ cd aufgabeexpr/
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001
+Hello World!
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d "test" localhost:3001
+Got a POST request
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d "data to PUT" -X PUT localhost:3001/user
+Got a PUT request at /user
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001/user -X DELETE
+Got a DELETE request at /user
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ node app.js 
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at Function.listen (C:\Users\adjep\Workspace\Express\aufgabeexpr\node_modules\expre
+ss\lib\application.js:635:24)
+    at Object.<anonymous> (C:\Users\adjep\Workspace\Express\aufgabeexpr\app.js:25:5)   
+    at Module._compile (node:internal/modules/cjs/loader:1369:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)
+    at Module.load (node:internal/modules/cjs/loader:1206:32)
+    at Module._load (node:internal/modules/cjs/loader:1022:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:
+12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1924:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {   
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3001
+}
+
+Node.js v20.12.1
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d id=1 description=putze http:// localhost:3001/add
+curl: (3) URL rejected: Bad hostname
+curl: (3) URL rejected: No host part in the URL
+{}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d  http:// localhost:3001/add
+{}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d id=1  http:// localhost:3001/add
+curl: (3) URL rejected: No host part in the URL
+{}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d id=1 http://localhost:3001/add
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d id=1 http://localhost:3001/add
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d id=1 http://localhost:3001/add[200~curl -d '{id=1, description="putzen"}' http://localhost:3000/add~
+curl: (3) bad range in URL position 27:
+http://localhost:3001/add[200~curl
+                          ^
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d '{id=1, description="putzen"}' http://localhost:3000/add
+curl: (52) Empty reply from server
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d '{id=1, description="putzen"}' http://localhost:3001/add
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl -d '{id=1, description="putzen"}' http://localhost:3001/add
+{}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{id=1, description="putzen"}' http://localhost:3000/add
+curl: (52) Empty reply from server
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{id=1, description="putzen"}' http://localhost:3001/add
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Expected property name or &#39;}&#39; in JSON at position 1<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at parse (C:\Users\adjep\Workspace\Express\aufgabeexpr\node_modules\body-parser\lib\types\json.js:92:19)<br> &nbsp; &nbsp;at C:\Users\adjep\Workspace\Express\aufgabeexpr\node_modules\body-parser\lib\read.js:128:18<br> &nbsp; &nbsp;at AsyncResource.runInAsyncScope (node:async_hooks:206:9)<br> &nbsp; &nbsp;at invokeCallback (C:\Users\adjep\Workspace\Express\aufgabeexpr\node_modules\raw-body\index.js:238:16)<br> &nbsp; &nbsp;at done (C:\Users\adjep\Workspace\Express\aufgabeexpr\node_modules\raw-body\index.js:227:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (C:\Users\adjep\Workspace\Express\aufgabeexpr\node_modules\raw-body\index.js:287:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:518:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1696:12)<br> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:82:21)</pre>
+</body>
+</html>
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{"id" : 1, "description" : "putzen"}' http://localhost:3000/add
+curl: (52) Empty reply from server
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{"id" : 1, "description" : "putzen"}' http://localhost:3001/add
+{"id":1,"description":"putzen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "putzen"}' http://localhost:3000/add
+curl: (52) Empty reply from server
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "putzen"}' http://localhost:3001/add
+{"description":"putzen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "putzen"}' http://localhost:3001/add
+{"description":"putzen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "tanzen"}' http://localhost:3001/add
+{"description":"tanzen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "tanzen"}' http://localhost:3001/add
+{"id":1,"description":"tanzen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "essen"}' http://localhost:3001/add
+{"id":2,"description":"essen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3000
+curl: (52) Empty reply from server
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001
+[]
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "essen"}' http://localhost:3001/add
+{"id":1,"description":"essen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$  curl localhost :3001
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+curl: (3) URL rejected: No host part in the URL
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001
+[{"id":1,"description":"essen"}]
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "essen"}' http://localhost:3001/add
+{"id":0,"description":"essen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001
+[{"id":0,"description":"essen"}]
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "essen"}' http://localhost:3001/add
+{"id":1,"description":"essen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001
+[{"id":0,"description":"essen"},{"id":1,"description":"essen"}]
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "essen"}' http://localhost:3001/add
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /add</pre>
+</body>
+</html>
+
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "essen"}' http://localhost:3001/todo
+{"id":0,"description":"essen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001/todo
+[{"id":0,"description":"essen"}]
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "essen"}' http://localhost:3001/todo
+{"id":1,"description":"essen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001/todo
+[{"id":0,"description":"essen"},{"id":1,"description":"essen"}]
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl --header "Content-Type: application/json" --request POST -d '{ "description" : "essen"}' http://localhost:3001/todo
+{"id":2,"description":"essen"}
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$ curl localhost:3001/todo
+[{"id":0,"description":"essen"},{"id":1,"description":"essen"},{"id":2,"description":"essen"}]
+adjep@DJARTH MINGW64 ~/Workspace/Express/aufgabeexpr (main)
+$
+
